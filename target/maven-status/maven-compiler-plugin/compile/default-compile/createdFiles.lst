@@ -1,0 +1,6 @@
+com\yxp\ssh\service\impl\CarInfoServiceImpl.class
+com\yxp\ssh\entity\CarInfoEntity.class
+com\yxp\ssh\action\CarInfoAction.class
+com\yxp\ssh\dao\impl\CarInfoDaoImpl.class
+com\yxp\ssh\service\CarInfoService.class
+com\yxp\ssh\dao\CarInfoDao.class

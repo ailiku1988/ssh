@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.youxinpai.changzheng.commons:commons-db:0.0.3-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/youxinpai/changzheng/commons/commons-db/0.0.3-SNAPSHOT/commons-db-0.0.3-20170927.065239-351.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/youxinpai/changzheng/commons/commons-db/0.0.3-SNAPSHOT/commons-db-0.0.3-20170927.065239-351-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/youxinpai/changzheng/commons/commons-db/0.0.3-SNAPSHOT/commons-db-0.0.3-20170927.065239-351-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

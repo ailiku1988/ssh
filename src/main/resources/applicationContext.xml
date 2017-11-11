@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <!-- 自动扫描与装配bean -->
+    <context:component-scan base-package="com.yxp.ssh"></context:component-scan>
+
+    <!-- dbcp配置 -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName">
+            <value>com.microsoft.sqlserver.jdbc.SQLServerDriver</value>
+        </property>
+        <property name="url">
+            <value>jdbc:sqlserver://localhost:1433;DatabaseName=Test</value>
+        </property>
+        <property name="username">
+            <value>sa</value>
+        </property>
+        <property name="password">
+            <value>Tiandao@123456</value>
+        </property>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource">
+            <ref local="dataSource" />
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <!--配置Hibernate的方言-->
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.SQLServer2008Dialect
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+
+                <!--格式化输出sql语句-->
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.use_sql_comments">false</prop>
+            </props>
+        </property>
+
+        <!--自动扫描实体 -->
+        <property name="packagesToScan"  value="com.yxp.ssh.entity" />
+    </bean>
+
+    <!-- 用注解来实现事务管理 -->
+    <bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+</beans>

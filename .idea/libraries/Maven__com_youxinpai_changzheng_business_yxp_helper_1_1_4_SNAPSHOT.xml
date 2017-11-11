@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.youxinpai.changzheng.business:yxp-helper:1.1.4-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/youxinpai/changzheng/business/yxp-helper/1.1.4-SNAPSHOT/yxp-helper-1.1.4-20171109.111428-110.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/youxinpai/changzheng/business/yxp-helper/1.1.4-SNAPSHOT/yxp-helper-1.1.4-20171109.111428-110-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/youxinpai/changzheng/business/yxp-helper/1.1.4-SNAPSHOT/yxp-helper-1.1.4-20171109.111428-110-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
